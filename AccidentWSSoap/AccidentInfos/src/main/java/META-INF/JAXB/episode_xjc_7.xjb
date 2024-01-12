@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bindings version="3.0" xmlns="https://jakarta.ee/xml/ns/jaxb">
+  <!--
+
+Ce fichier a été généré par Eclipse Implementation of JAXB, v3.0.0 
+Voir https://eclipse-ee4j.github.io/jaxb-ri 
+Toute modification apportée à ce fichier sera perdue lors de la recompilation du schéma source. 
+Généré le : 2023.12.12 à 10:49:34 PM CET 
+
+  -->
+  <bindings scd="x-schema::tns" xmlns:tns="http://spring.io/guides/accidents">
+    <schemaBindings map="false">
+      <package name="io.spring.guides.accidents"/>
+    </schemaBindings>
+    <bindings scd="tns:accident">
+      <class ref="io.spring.guides.accidents.Accident"/>
+    </bindings>
+    <bindings scd="tns:Accidents">
+      <class ref="io.spring.guides.accidents.Accidents"/>
+    </bindings>
+    <bindings scd="tns:AddAccidentRequest">
+      <class ref="io.spring.guides.accidents.AddAccidentRequest"/>
+    </bindings>
+    <bindings scd="tns:AddAccidentResponse">
+      <class ref="io.spring.guides.accidents.AddAccidentResponse"/>
+    </bindings>
+    <bindings scd="tns:GetAllAccidentsRequest">
+      <class ref="io.spring.guides.accidents.GetAllAccidentsRequest"/>
+    </bindings>
+    <bindings scd="tns:GetAllAccidentsResponse">
+      <class ref="io.spring.guides.accidents.GetAllAccidentsResponse"/>
+    </bindings>
+    <bindings scd="tns:getAccidentByLocationRequest">
+      <class ref="io.spring.guides.accidents.GetAccidentByLocationRequest"/>
+    </bindings>
+    <bindings scd="tns:getAccidentByLocationResponse">
+      <class ref="io.spring.guides.accidents.GetAccidentByLocationResponse"/>
+    </bindings>
+  </bindings>
+</bindings>
+

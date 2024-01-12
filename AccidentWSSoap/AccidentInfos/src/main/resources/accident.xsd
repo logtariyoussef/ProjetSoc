@@ -1,0 +1,80 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://spring.io/guides/accidents"
+           targetNamespace="http://spring.io/guides/accidents"
+           xmlns="http://spring.io/guides/accidents"
+           elementFormDefault="qualified">
+
+    <!-- Define complex type for road closure -->
+    <xs:element name="accident">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="xs:long"/>
+                <xs:element name="location" type="xs:string"/>
+                <xs:element name="time" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Define complex type for the list of road closures -->
+    <xs:element name="Accidents">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="tns:accident" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Define complex type for GetRoads request -->
+
+    <xs:element name="AddAccidentRequest">
+        <xs:complexType>
+            <xs:sequence>
+
+                <xs:element name="location" type="xs:string"/>
+                <xs:element name="time" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="AddAccidentResponse">
+        <xs:complexType>
+            <xs:sequence>
+
+                <xs:element ref="tns:accident"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="GetAllAccidentsRequest">
+        <xs:complexType/>
+    </xs:element>
+
+    <!-- Define complex type for GetRoads response -->
+    <xs:element name="GetAllAccidentsResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="tns:Accidents"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getAccidentByLocationRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="location" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getAccidentByLocationResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="tns:Accidents"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+
+</xs:schema>
+
+
